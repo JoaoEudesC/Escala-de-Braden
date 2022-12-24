@@ -89,6 +89,9 @@ form1.addEventListener("submit" , (e)=>{
     else{
         res1.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"
     }
+    percepeçaoSensorial.value = ""
+    percepeçaoSensorial.focus()
+
 
 })
 
@@ -123,6 +126,8 @@ form2.addEventListener("submit" , (e)=>{
     else{
         res2.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"
     }
+    humidade.value = ""
+    humidade.focus()
 })
 
 
@@ -158,6 +163,8 @@ form3.addEventListener("submit", (e) =>{
     else{
         res3.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"  
     }
+    actividade.value = ""
+    actividade.focus()
 })
 
 
@@ -189,6 +196,8 @@ form4.addEventListener("submit" , (e)=>{
     else{
         res4.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"
     }
+    mobilidade.value = ""
+    mobilidade.focus()
 })
 
 
@@ -223,6 +232,8 @@ form5.addEventListener("submit", (e)=>{
     else{
         res5.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"
     }
+    nutriçao.value = ""
+    nutriçao.focus()
 })
 
 
@@ -253,4 +264,6 @@ form6.addEventListener("submit", (e)=>{
     else{
         res6.innerHTML = "<p> A escala relacionada não existe, certifique o preenchimento dos campos e tente novamente. (Dados invalidos)</p>"
     }
+    fricçao.value = ""
+    fricçao.focus()
 })
