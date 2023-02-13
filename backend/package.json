@@ -1,0 +1,30 @@
+{
+  "name": "escala-de-braden",
+  "version": "1.0.0",
+  "description": "Uma escala de braden para ajudar os alunos de enfermagem do politecnico do leiria a se ajustar melhor no dia-dia , aumentar a produtividade e diminuir o tempo perdidio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoEudesC/Escala-de-Braden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoEudesC/Escala-de-Braden/issues"
+  },
+  "homepage": "https://github.com/JoaoEudesC/Escala-de-Braden#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,155 @@
+body{
+    background-color: #00022e;
+    background-image: url("https://transparenttextures.com/patterns/45-degree-fabric-light.png");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+header{
+    text-align: center;
+    color: white;
+}
+
+
+
+img{
+    border-radius: 60px;
+    border: 5px solid #00022e ;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+
+
+
+#instruçoes2{
+    color: white;
+}
+
+
+strong{
+    font-weight: 900;
+    font-size: 28px;
+}
+
+
+#titulo{
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+.centro{
+    text-align: center;
+    margin: 20px;
+    font-size: 22px;
+}
+
+
+
+.div_subtemas{
+    background-image: linear-gradient(to left, #8baca2 , #569A7A);
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 4px;
+    margin: 15px;
+    border: solid #00022e ;
+    border-radius: 10px;
+}
+
+.paragrafo_subtemas{
+    font-size: 18px;
+    text-align: center;
+}
+
+.container{
+    margin: 30px;
+    background-image: linear-gradient( to left,#6AADCE,#B5B2C2 );
+    box-shadow: 3px 3px 3px 3px black;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+ul{
+    font-size: 20px;
+}
+
+
+#allres{
+    background-image: linear-gradient( to left,#6AADCE,#B5B2C2 );
+    padding: 10px;
+    margin-top: 15px;
+    box-shadow: 3px 3px 3px 3px black;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+#Door{
+    color: rgb(230, 230, 247);
+    text-align: start;
+    cursor: pointer;
+    
+}
+
+#span-Door{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#span-Logout{
+    font-size: 15px;
+}
+
+
+li{
+    margin: 10px;
+    margin-top: 20px;
+
+}
+
+.subtitulo{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+    font-size: 35px;
+}
+
+.designaçao{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+input{
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-left: 3px;
+}
+
+
+.botao{
+    background-color: darkgreen;
+    color: antiquewhite;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.botao:hover{
+    background-color: rgb(120, 180, 120);
+    transition-duration: 0.7s;
+    transform: scale(1.1);
+
+}
+
+
+.res_espaço{
+    margin: 50px;
+}
+

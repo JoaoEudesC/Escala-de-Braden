@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../assets/saude.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Escala de Braden</title>
+    </head>
+    <body>
+        <header>
+            <span id="span-Door">
+                <i class="fa-sharp fa-solid fa-door-open fa-2x" id="Door"> 
+                    <span id="span-Logout">logout</span>
+                </i>
+            </span>
+            <h1>
+                <p id="titulo">Escala de Braden</p>
+                <img src="../assets/ambulancia.jpg" alt="imagem de uma ambulancia" width="180px" height="auto" >
+            </h1>
+            <h2 id="instruçoes">
+                <strong>Instruções</strong>: Insira e submeta a escala em que seu utente se encontra de acordo com as escalas listadas, os números de cada escala  estão listados enumerando cada situação.
+                <p id="instruçoes2">(A intervenção para as condições submetidas serão transmitidas ao final da página, na sessão "Intervenções").</p>
+            </h2>
+        </header>
+        <main>
+            <div class="container">
+                <form id="form1">
+                    <h2 class="subtitulo">Percepção Sensorial</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Completamente limitada:</h3> 
+                        <p class="paragrafo_subtemas">Não reage a estímulos dolorosos (nao geme , nao se retrai, nem se agarra a nada) devido a um nivel reduzido de conciência ou sedação, ou capacidade limitada de sentir dor na maior parte do seu corpo.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Muito limitada:</h3>  
+                        <p class="paragrafo_subtemas"> Reage unicamente a estímulos dolorosos, não consegue comunicar o desconforto,excepto através de gemidos ou inquietação, OU tem uma limitação sensorial que lhe reduz a capacidade de sentir dor ou desconforto em mais de metade do corpo.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Ligeiramente limitada:</h3> 
+                        <p class="paragrafo_subtemas">Obedece as instruções verbais, mas nem sempre consegue comunicar o desconforto ou a necessidade de ser mudado de posição, OU tem alguma limitação sensorial que lhe reduz a capacidade de sentir do ou desconforto em 1 ou 2 extremidades.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">4- Nenhuma limitação:</h3> 
+                        <p class="paragrafo_subtemas">Obedece as instruções verbais. Não apresenta défice sensorial que possa limitar a capacidade de sentir ou exprimir dor ou desconforto.</p>
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="percepçao_sensorial" placeholder="Selecione uma escala">
+                </form>
+            </div>
+            
+            <div class="container">
+                <form id="form2">
+                    <h2 class="subtitulo">Humidade</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Pele constatemente húmida:</h3> 
+                        <p class="paragrafo_subtemas">A pele mantém-se sempre húmida devido a sudoreses, urina, etc. É detectada humidade sempre que o doente é deslocado ou virado.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Pele muito húmida:</h3> 
+                        <p class="paragrafo_subtemas"> A pele está frequentemente mas, nem sempre, húmida. Os lençóes tem de ser mudados pelo menos uma vez por turno.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Pele Ocasionamente húmida:</h3>
+                        <p class="paragrafo_subtemas"> A pele está por vezes húmida, exigindo uma muda adicional de lençóes aproximadamente uma vez por dia.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">4- Pele raramente húmida:</h3> 
+                        <p class="paragrafo_subtemas">A pele está geralmente seca, os lençóes só tem de ser mudados nos intervalos habituais.</p>
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="humidade" placeholder="Selecione uma escala">
+                </form>
+            </div>
+            
+            <div class="container">
+                <form id="form3">
+                    <h2 class="subtitulo">Actividade</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Acamado:</h3> 
+                        <p class="paragrafo_subtemas">O doente está confinado a à cama.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Sentado:</h3>  
+                        <p class="paragrafo_subtemas">Capacidade de marcha gravemente limitada ou inexistente. Não pode fazer carga e/ou tem de ser ajudado a sentar-se na cadeira normal ou de rodas.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Anda Ocasionamente:</h3> 
+                        <p class="paragrafo_subtemas">Por vezes caminha durante o dia, mas apenas curtas distâncias, com ou sem ajuda. Passa a maior parte dos turnos deitado ou sentado.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">4- Anda frequentemente:</h3> 
+                        <p class="paragrafo_subtemas"> Anda fora do quarto pelo menos duas vezes por dia, e dentro do quarto pelo menos de duas em duas horas durante o período em que está acordado.</p>
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="Actividade" placeholder="Selecione uma escala">
+                </form>
+            </div>
+            
+            <div class="container">
+                <form id="form4">
+                    <h2 class="subtitulo">Mobilidade</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Completamente imobilizado:</h3> 
+                        <p class="paragrafo_subtemas">Não faz qualquer movimento com o corpo ou extremidades sem ajuda.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Muito limitada:</h3>
+                        <p class="paragrafo_subtemas"> Ocasionalmente muda ligeiramente posição do corpo ou das extremidades, mas não é capaz de fazer mudanças frequentes ou significativas sozinho.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Ligeiramente limitada:</h3> 
+                        <p class="paragrafo_subtemas"> Faz pequenas e frequentes alterações  de posição do corpo e das extremidades sem ajuda.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">4- Nenhuma limitação:</h3> 
+                        <p class="paragrafo_subtemas">faz grandes ou frequentes alterações de posição do corpo sem ajuda.</p>
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="Mobilidade" placeholder="Selecione uma escala">
+                </form>
+            </div>
+            
+            <div class="container">
+                <form id="form5">
+                    <h2 class="subtitulo">Nutrição</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Muito pobre:</h3> 
+                        <p class="paragrafo_subtemas"> Nunca come uma refeição completa. Raremente come mais de 1/3 da comida que lhe é oferecida. come diariamente duas refeições , ou menos, de proteínas (carne ou lacticínios). Ingere poucos líquidos. Não toma um suplemento dietético líquido OU está em jejum e/ou a dieta líquida ou a soros durante mais de cinco dias.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Provavelmente inadequada:</h3> 
+                        <p class="paragrafo_subtemas">Raramente come uma refeição completa e geralmente come apenas cerca de 1/2 da comida que lhe é oferecida. A ingestão de proteínas consiste unicamente em três refeições diárias de carne ou lacticínios. Ocasionalmente toma um suplemento dietético OU recebe menos do que a quantidade ideal de líquidos ou alimentos por sonda.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Adequada:</h3> 
+                        <p class="paragrafo_subtemas">Come mais da metade da maior parte das refeições. Faz quatro refeições diárias de proteínas (carne, peixe, lacticínios). Por vezes recusa uma refeição, mas toma geralmente um suplemento caso lhe seja oferecido. OU é alimentado por sonda ou num regime de nutrição parentérica total satisfazendo provavelmente a maior parte das necessidades nutricionais.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">4- Excelente:</h3> 
+                        <p class="paragrafo_subtemas">Come a maior parte das refeições na íntegra. Nunca recusa uma refeição. Faz geralmente um total de quatro ou mais refeições (carne, peixe, lacticínios). Come Ocasionalmente entre as refeições. Não requer suplementos.</p> 
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="Nutriçao" placeholder="Selecione uma escala">
+                </form>
+            </div>
+            
+            <div class="container form-floating mb-3">
+                <form id="form6">
+                    <h2 class="subtitulo">Fricção e forças de deslizamento</h2>
+                    <div class="div_subtemas">
+                        <h3 class="centro">1- Problema:</h3> 
+                        <p class="paragrafo_subtemas">Requer uma ajuda moderada a máxima para se movimentar. É impossivel levantar o doente completamente sem deslizar contra os lençóes. Descai frequentemente na cama ou cadeira, exigindo um reposicionamento constante com ajuda máxima. Espasticidade contraturas ou agitação leva a fricção quase constante.</p> 
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">2- Problema Potencial:</h3> 
+                        <p class="paragrafo_subtemas">Movimenta-se com alguma dificuldade ou requer uma ajuda mínima. É provável que, durante uma movimentação, a pele deslize de alguma forma contra os lençóes, cadeira, apoios ou outros dispositivos. A maior parte do tempo, mantém uma posição relativamente boa na cama ou na cadeira, mas Ocasionalmente descai.</p>
+                    </div>
+                    <div class="div_subtemas">
+                        <h3 class="centro">3- Nenhum Problema:</h3> 
+                        <p class="paragrafo_subtemas">Move-se na cama e na cadeira sem ajuda e tem força muscular suficiente para se levantar completamente durante uma mudança de posição. mantém uma correcta posição na cama ou cadeira.</p> 
+                    </div>
+                    <input type="submit" value="Click" class="botao">
+                    <input type="number" name="number" id="Fricçao" placeholder="Selecione uma escala" >
+                </form>
+            </div>
+            
+            <div id="allres">
+                <h2 class="subtitulo">Intervenções</h2>
+                <div id="res1" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="res2" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="res3" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="res4" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="res5" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="res6" class="res_espaço">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <script src="../javscript/app.js"></script>
+    </body>
+</html>

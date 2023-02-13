@@ -1,0 +1,181 @@
+body{
+    background-color: #00022e;
+    background-image: url("https://transparenttextures.com/patterns/45-degree-fabric-light.png");
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 16px;
+}
+
+
+
+header{
+    color: white;
+    text-align: center;
+    
+}
+
+main img{
+    border-radius: 60px;
+    width: 600px;
+    height: auto;
+    margin: auto;
+    
+}
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 15px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+    
+}
+
+
+label{
+    color: red;
+}
+
+#span_login{
+    display: flex;
+}
+
+#login{
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(167, 69, 69);
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: 2px 2px 1px 1px black;
+    width: 100px;
+    align-self: flex-start;
+    margin-top: 2px;
+}
+
+#login:hover{
+    background-color: rgb(211, 130, 130);
+    transform: scale(1.0);
+    transition-duration: 2s;
+}
+
+
+#Cadastrar{
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(167, 69, 69);
+    padding: 15px;
+    width: 220px;
+    box-shadow: 2px 2px 1px 1px black;
+    border: none;
+    border: black solid;
+}
+
+
+
+#Cadastrar:hover{
+    background-color: rgb(211, 130, 130);
+    transform: scale(1.0);
+    transition-duration: 2s;
+}
+
+
+input{
+    
+    border:solid rgb(2, 2, 110);
+    box-shadow: 1px 1px 1px 1px black;
+    
+}
+
+
+.divPassword{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#AlertCapslock{
+    color: red;
+    display: none;
+}
+
+#AlertCapslockConfirm{
+    color: red;
+    display: none;
+}
+
+#Alertpassword{
+    text-align: center;
+    display: none;
+}
+
+@media(max-width:900px){
+    main img{
+        border-radius: 60px;
+        width: 400px;
+        height: auto;
+        margin: auto;
+        
+    }
+    
+}
+@media(max-width:657px){
+    main img{
+        border-radius: 60px;
+        width: 300px;
+        height: auto;
+        margin: auto;
+        
+    }
+    
+}
+@media(max-width:522px){
+    main img{
+        border-radius: 60px;
+        width: 215px;
+        height: auto;
+        margin: auto;
+        
+    }
+    
+}
+@media(max-width:405px){
+    main img{
+        border-radius: 60px;
+        width: 300px;
+        height: auto;
+        margin-top: 80px;
+        
+        
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        
+    }
+    
+    #Cadastrar{
+        margin-bottom: 10px;
+    }
+    
+    
+}

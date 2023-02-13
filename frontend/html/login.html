@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../assets/saude.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h4>Já possui uma conta? <a href="file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden2/cadastro.html" id="LinkInscrição">Inscreva-se</a></h4>
+        <p>E tenha acesso a escala de braden otimizada como um app</p>
+    </header>
+    <main>
+        <img src="../assets/loginimage.svg" alt="Imagem de uma enfermeira e um médico a cuidar de um idoso e empurra-lo na cadeira de rodas">
+        <form id="form">
+            <div class="alert alert-danger" role="alert" id="MessageError">
+                Usuário não autorizado
+            </div>
+            <div class="form-floating">
+                <input type="email" name="email" id="email" placeholder="Email" class="form-control floatingEmail">
+                <label for="floatingEmail">Email</label>
+            </div>
+            <div class="form-floating" id="div-password">
+                <input type="password" name="password" id="password" placeholder="Password" class="form-control floatingPassword">
+                <label for="floatingPassword">Password</label>
+                <i class="fa-solid fa-eye" id="eye"></i>
+                <p id="CapsLockMessage">(Capslock ativado)</p>
+            </div>
+            <div class="mb-3 form-check" id="Checkbox">
+                <input type="checkbox" name="Check1" id="Check1" class="form-check-input">
+                <label for="Check1" class="form-check-label" id="labor">Lembre-me</label>
+            </div>
+            <input type="submit" value="Submit" id="Cadastrar">
+        </form>
+    </main>
+    <script src="../javscript/login.js"></script>
+</body>
+</html>
