@@ -16,7 +16,7 @@
 
 
 
-//Mapeando o eneter para envio do formulário através do keypress
+//Mapeando o enter para envio do formulário através do keypress
     document.addEventListener("keypress" , (e) =>{
         if(e.key === "enter"){
             form.onsubmit();
@@ -65,7 +65,7 @@ eye.addEventListener("click" , ()=>{
         const url = "http://localhost:8080/usuario/login"
         const MessageError = document.getElementById("MessageError")
         
-        //Função que adiciona os elementos ao localstorage
+        //Função que adiciona os elementos ao localStorage
         addLocalstorage()
         
         if(!data){

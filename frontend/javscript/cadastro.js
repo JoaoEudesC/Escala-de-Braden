@@ -41,11 +41,7 @@
         }
     })
 
-//Ligando o botão de login do cadastro com a pagina de login
-    const buttomLogin = document.getElementById("login")
-    buttomLogin.addEventListener("click" , (e) =>{
-        window.location.href = "../Escala-de-Braden2/frontend/html/login.html"
-    })
+
 
 
 
@@ -72,11 +68,13 @@
         
         //Config dos dados a serem passados no fetch  e realização do fetcg api
             const data = accessData();
-            const url = "http://localhost:8080/usuario/criar"
+            const url = "http://localhost:3000/usuario/criar"
             if(!data){
                 return alert("Dados não estão corretos")
             }
-
+        //Mensagem de erro caso o email cadastrado já exista no banco de dados
+            const existingEmailMessage = document.getElementById("existingEmailMessage")
+            
             const Fetch = {
                 method:"POST",
                 body:JSON.stringify(data),
@@ -85,11 +83,14 @@
                 },
                 credentials: "same-origin"
             }
-
+            
             await fetch(url , Fetch)
             .then((response) =>{
                 if(response.status == 201){
-                    return window.location.href = "../Escala-de-Braden2/frontend/html/login.html"
+                    return window.location.href = "/home/joao/Escala-de-Braden/frontend/html/login.html"
+                }
+                else if(response.status == 422){
+                    return existingEmailMessage.style.display = "block"
                 }
                 else{
                     return alert ("Usuário não cadastrado, tente novamente")

@@ -12,6 +12,10 @@ const authController = require("../controllers/authController")
     const {registerValidate} = require("../middlewares/userMiddleware")
     const ErrorMiddleware = require("../middlewares/errorMiddlewares")
 
+//Importação de middlewares de checagem se email já existe no banco de dados
+    const {checkExistingEmail} = require("../middlewares/repetionMiddleware")
+    
+
 
 
 
@@ -24,7 +28,7 @@ router.get("/todos" , userController.getAll)
 router.get("/:id" , userController.getUserById)
 
 //Rota que irá criar um novo usuário no banco de dados (POST)
-router.post("/criar" , registerValidate , userController.createUser)
+router.post("/criar" , checkExistingEmail , registerValidate, userController.createUser)
 
 //Rota que irá dá um update em um usuário existente(UPDATE - PUT)
 router.put("/:id" , userController.updateUserById)

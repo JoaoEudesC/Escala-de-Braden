@@ -69,6 +69,11 @@ label{
     margin-top: 2px;
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
 #login:hover{
     background-color: rgb(211, 130, 130);
     transform: scale(1.0);
@@ -114,14 +119,21 @@ input{
 #AlertCapslock{
     color: red;
     display: none;
+    
 }
 
 #AlertCapslockConfirm{
     color: red;
     display: none;
+    
 }
 
 #Alertpassword{
+    text-align: center;
+    display: none;
+}
+
+#existingEmailMessage{
     text-align: center;
     display: none;
 }
