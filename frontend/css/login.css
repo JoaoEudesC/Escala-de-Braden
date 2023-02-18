@@ -88,6 +88,10 @@ input{
     flex-direction: column;
 }
 
+#labor{
+    color: white;
+}
+
 
 i{
     color: white;
