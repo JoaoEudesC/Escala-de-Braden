@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JoaoEudesC/Escala-de-Braden#readme",
   "dependencies": {
+    "@h4ad/serverless-adapter": "^2.16.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
