@@ -43,7 +43,11 @@
 
 
 
-
+//Ligando minha tela de cadastro com minha tela de login
+    const botaoLogin = document.getElementById("login")
+    botaoLogin.addEventListener("click" , () =>{
+        window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/frontend/index.html"
+    })
 
 
 
