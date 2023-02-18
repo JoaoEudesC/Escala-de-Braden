@@ -87,7 +87,7 @@
             await fetch(url , Fetch)
             .then((response) =>{
                 if(response.status == 201){
-                    return window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/public/index.html"
+                    return window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/frontend/index.html"
                 }
                 else if(response.status == 422){
                     return existingEmailMessage.style.display = "block"
