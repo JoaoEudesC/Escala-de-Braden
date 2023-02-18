@@ -1,6 +1,7 @@
 
 
 //Mapeando o enter para envio do formulário através do keypress
+const form = document.getElementById("form") 
     document.addEventListener("keypress" , (e) =>{
         if(e.key === "enter"){
             form.onsubmit();
@@ -41,6 +42,7 @@
 
 //Função que vai ativar o botão lembre-me para que o usuário possa salvar os dados colocados no input e na senha Através do localStorage
     //Verificação quando a pagina é carregada se há dados do usuário salvos no localStorage, podemos fazer isso através do DOMContentLoaded(com essa função if eu estou dizendo basicamente que se tiver um password e um email no localStorage eu vou pegar os valores dos inputs e passar lá, como o checkBox marcado true) => primeira validação
+    //Explicação desta função => sempre que a pagina for recarregada ele vai verificar se há umvalor com um key password e email no localstorage, caso haja ele vai igualar o valor do input aos valores correspondentes a estas chaves no localstorage e o checkBox vai estar marcado
     document.addEventListener("DOMContentLoaded" , () =>{
         if(localStorage.getItem("email") && localStorage.getItem("password")){
             document.getElementById("email").value = localStorage.getItem("email");
@@ -76,7 +78,7 @@ CheckBox.addEventListener("change" , () =>{
 
 
 //Autenticação e login => Ligação da minha api com o frontend
-    const form = document.getElementById("form")    
+
     const init = () =>{
         form.addEventListener("submit" , FormerSubmit)
     }
