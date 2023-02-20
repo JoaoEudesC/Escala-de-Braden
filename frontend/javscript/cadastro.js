@@ -46,7 +46,7 @@
 //Ligando minha tela de cadastro com minha tela de login
     const botaoLogin = document.getElementById("login")
     botaoLogin.addEventListener("click" , () =>{
-        window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/frontend/index.html"
+        window.location.href = "../index.html"
     })
 
 
@@ -91,7 +91,7 @@
             await fetch(url , Fetch)
             .then((response) =>{
                 if(response.status == 201){
-                    return window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/frontend/index.html"
+                    return window.location.href = "../index.html"
                 }
                 else if(response.status == 422){
                     return existingEmailMessage.style.display = "block"

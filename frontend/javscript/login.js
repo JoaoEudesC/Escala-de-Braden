@@ -107,7 +107,7 @@ CheckBox.addEventListener("change" , () =>{
         await fetch(url , Fetch)
         .then((response) =>{
             if(response.status == 200){
-                window.location.href = "/home/joao/Escala-de-Braden2/frontend/html/page.html"
+                window.location.href = "../html/page.html"
             }
             else{
                 return MessageError.style.display = "block"

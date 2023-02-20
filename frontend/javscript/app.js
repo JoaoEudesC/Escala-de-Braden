@@ -49,7 +49,7 @@ let hide = document.getElementsByClassName("hide")
 const logout = document.getElementById("Door")
 
 logout.addEventListener("click" , () =>{
-    window.location.href = "file://wsl.localhost/Ubuntu/home/joao/Escala-de-Braden/frontend/index.html"
+    window.location.href = "../index.html"
 })
 
 
