@@ -161,6 +161,9 @@ i:hover{
         
         
     }
+    i{
+        align-self: flex-start;
+    }
     
     #Cadastrar{
         margin-bottom: 10px;
