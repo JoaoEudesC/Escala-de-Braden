@@ -31,7 +31,7 @@ router.get("/:id" , userController.getUserById)
 router.post("/criar" , checkExistingEmail , registerValidate, userController.createUser)
 
 //Rota que irá dá um update em um usuário existente(UPDATE - PUT)
-router.put("/:id" , userController.updateUserById)
+router.put("/:id" ,registerValidate  ,userController.updateUserById)
 
 //Rota que irá pegar o usuário pelo id e enviar um email como resposta da requisição(GET-ID)
 
