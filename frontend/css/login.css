@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -15,7 +16,7 @@ header{
     text-align: center;
     color: white;
     margin-top: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 #LinkInscrição{
@@ -25,11 +26,12 @@ header{
 
 #LinkInscrição:hover{
     color: rgb(247, 58, 58);
+    text-decoration: underline;
     
 }
 
 main img{
-    border-radius: 60px;
+    
     width: 600px;
     height: auto;
     margin: auto;
@@ -39,7 +41,7 @@ main img{
 
 main{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2 , 1fr);
 }
 
 
@@ -66,6 +68,7 @@ label{
     box-shadow: 2px 2px 1px 1px black;
     border: none;
     border: black solid;
+    transition-duration: 1s;
 }
 
 
@@ -73,7 +76,7 @@ label{
 #Cadastrar:hover{
     background-color: rgb(211, 130, 130);
     transform: scale(1.0);
-    transition-duration: 2s;
+    
 }
 
 input{
@@ -117,8 +120,7 @@ i:hover{
 
 @media(max-width:900px){
     main img{
-        border-radius: 60px;
-        width: 400px;
+        width: 25rem;
         height: auto;
         margin: auto;
         
@@ -127,8 +129,7 @@ i:hover{
 }
 @media(max-width:657px){
     main img{
-        border-radius: 60px;
-        width: 300px;
+        width: 18.8rem;
         height: auto;
         margin: auto;
         
@@ -137,8 +138,7 @@ i:hover{
 }
 @media(max-width:522px){
     main img{
-        border-radius: 60px;
-        width: 215px;
+        width: 13.4rem;
         height: auto;
         margin: auto;
         
@@ -147,8 +147,7 @@ i:hover{
 }
 @media(max-width:405px){
     main img{
-        border-radius: 60px;
-        width: 300px;
+        width: 18.4rem;
         height: auto;
         margin-top: 80px;
         
@@ -166,7 +165,7 @@ i:hover{
     }
     
     #Cadastrar{
-        margin-bottom: 10px;
+        margin-bottom: 5rem;
     }
     
     

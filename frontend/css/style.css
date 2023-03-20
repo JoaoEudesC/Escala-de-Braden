@@ -139,11 +139,11 @@ input{
     border-radius: 5px;
     font-weight: bolder;
     box-shadow: 1px 1px 1px 1px black;
+    transition-duration: 1s;
 }
 
 .botao:hover{
     background-color: rgb(120, 180, 120);
-    transition-duration: 0.7s;
     transform: scale(1.1);
 
 }
