@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,30 +13,33 @@
 </head>
 <body>
     <header>
-        <h4>Já possui uma conta? <a href="./frontend/html/Cadastro.html" id="LinkInscrição">Inscreva-se</a></h4>
+        <h4>Já possui uma conta? <a href="./frontend/html/Cadastro.html">Inscreva-se</a></h4>
         <p>E tenha acesso a escala de braden otimizada como um app</p>
     </header>
     <main>
         <img src="./frontend/assets/loginimage.svg" alt="Imagem de uma enfermeira e um médico a cuidar de um idoso e empurra-lo na cadeira de rodas">
         <form id="form">
             <div class="alert alert-danger" role="alert" id="MessageError">
-                Usuário não autorizado
+                Email ou senha inválidos <i class="fa-solid fa-circle-exclamation"></i>
             </div>
             <div class="form-floating">
                 <input type="email" name="email" id="email" placeholder="Email" class="form-control floatingEmail">
                 <label for="floatingEmail">Email</label>
+                <i class="fa-solid fa-envelope iconeLeft"></i>
             </div>
             <div class="form-floating" id="div-password">
                 <input type="password" name="password" id="password" placeholder="Password" class="form-control floatingPassword">
                 <label for="floatingPassword">Password</label>
+                <i class="fa-solid fa-lock iconeLeft"></i>
                 <i class="fa-solid fa-eye" id="eye"></i>
                 <p id="CapsLockMessage">(Capslock ativado)</p>
             </div>
             <div class="mb-3 form-check" id="Checkbox">
                 <input type="checkbox" name="Check1" id="Check1" class="form-check-input">
-                <label for="Check1" class="form-check-label" id="labor">Lembre-me</label>
+                <label for="Check1" class="form-check-label" id="labor">Lembrar</label>
             </div>
-            <input type="submit" value="Submit" id="Cadastrar">
+            <a href="./frontend/html/ForgotPassord.html">Esqueci minha senha</a>
+            <button type="submit" id="Cadastrar">Submit</button>
         </form>
     </main>
     <script src="./frontend/javascript/login.js"></script>

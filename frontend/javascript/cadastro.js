@@ -16,6 +16,23 @@
     })
 
 
+//Adição de funcionalidade ao icone do olho para revelar a senha hasheada
+const eye = document.getElementById("eye")
+eye.addEventListener("click", () =>{
+    const inputSenha = document.getElementById("password")
+    if(inputSenha.type == "password"){
+        inputSenha.type = "text"
+        eye.classList.remove("fa-eye")
+        eye.classList.add("fa-eye-slash")
+    }
+    else{
+        inputSenha.type = "password"
+        eye.classList.remove("fa-eye-slash")
+        eye.classList.add("fa-eye")
+    }
+})
+
+
 
 
 //Mapeando a tecla capslock para avisar ao usuário quando a tecla estiver ativada

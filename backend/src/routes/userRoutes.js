@@ -49,6 +49,10 @@ router.post("/login" , loginValidate ,authController.login)
 
 router.post("/rotaAutenticada" , userController.rotaAutenticada , authController.tokenVerification)
 
+//Rota que enviará o email com o token para recuperação de senha para o usuário
+router.post("/forgotPassword", authController.forgotPassword)
+
+
 //Rota de teste
 router.get("/teste" , userController.teste)
 

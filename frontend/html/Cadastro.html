@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,39 +13,41 @@
     </head>
     <body>
         <header>
-            <span id="span_login">
-                <a href="../../index.html"><button id="login">Login</button></a>
-            </span>
             <h2>Faça o seu cadastro gratuito e tenha acesso ao app da escala de braden</h2>
         </header>
         <main>
-            <img src="../assets/Nursing home-rafiki.svg" alt="Imagem de uma enfermeira a tratar e cuidar de um idoso">
+            <a href="../../index.html"><img src="../assets/Nursing home-rafiki.svg" alt="Imagem de uma enfermeira a tratar e cuidar de um idoso"></a>
             <form id="form">
                 <div class="alert alert-danger" role="alert" id="Alertpassword">
-                    As senhas não coincidem !!
+                    As senhas não coincidem !! <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
                 <div class="alert alert-danger" role="alert" id="existingEmailMessage">
-                    Este email já existe
+                    Este email já existe <i class="fa-solid fa-circle-exclamation"></i>
                 </div>
                 <div class="form-floating">
-                    <input type="text" name="name" id="name" placeholder="Name" class="form-control floatingName" maxlength="25" minlength="3">
+                    <input type="text" id="name" placeholder="Name" class="form-control floatingName" maxlength="25" minlength="3">
                     <label for="floatingName">Nome completo</label>
+                    <i class="fa-solid fa-file-signature iconeLeft"></i>
                 </div>
                 <div class="form-floating">
-                    <input type="email" name="email" id="email" placeholder="Email"  class = "form-control floatingEmail">
+                    <input type="email" id="email" placeholder="Email"  class = "form-control floatingEmail">
                     <label for="floatingEmail">Email</label>
+                    <i class="fa-solid fa-envelope iconeLeft"></i>
                 </div>
                 <div class="form-floating divPassword">
-                    <input type="password" name="password" id="password" placeholder="Password" class="form-control floatingPassword" minlength="3" maxlength="18">
+                    <input type="password"  id="password" placeholder="Password" class="form-control floatingPassword" minlength="3" maxlength="18">
                     <label for="floatingPassword">Password</label>
+                    <i class="fa-solid fa-lock iconeLeft"></i>
+                    <i class="fa-solid fa-eye" id="eye"></i>
                     <p id="AlertCapslock">(Capslock ativado)</p>
                 </div>
                 <div class="form-floating">
-                    <input type="password" name="confirmPassword" id="confirmPassword"   placeholder = "Confirm password" class="form-control floatingConfirmPassword" minlength="3" maxlength="18">
+                    <input type="password"  id="confirmPassword"   placeholder="Confirm password" class="form-control floatingConfirmPassword" minlength="3" maxlength="18">
                     <label for="floatingConfirmPassword">Confirm password</label>
+                    <i class="fa-solid fa-lock iconeLeft"></i>
                     <p id="AlertCapslockConfirm">(Capslock ativado)</p>
                 </div> 
-                <input  type="submit" value="Submit" id="Cadastrar">
+                <button type="submit" id="Cadastrar">Submit</button>
             </form>
         </main>
         <script src="../javascript/cadastro.js"></script>

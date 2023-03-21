@@ -28,9 +28,13 @@ const form = document.getElementById("form")
     eye.addEventListener("click" , ()=>{
         if(Senha.type == "password"){
             Senha.type = 'text'
+            eye.classList.remove("fa-eye")
+            eye.classList.add("fa-eye-slash")
         }
         else{
             Senha.type = 'password'
+            eye.classList.remove("fa-eye-slash")
+            eye.classList.add("fa-eye")
         }
     })
 

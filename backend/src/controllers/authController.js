@@ -2,6 +2,8 @@
     const userSchema = require("../models/UserSchema")
     const bcrypt = require("bcrypt")
     const jwt = require("jsonwebtoken")
+    const Crypto = require("crypto")
+    const {transporterHotmail} = require("../mail/mailler")
 
 
 
@@ -86,6 +88,49 @@
             })
         }
     }
+
+    //Função para enviar um token para o usuário por email para que ele possa recuperar a senha
+    authController.forgotPassword = async(req,res) =>{
+        const {email} = req.body;
+        try {
+            const user = await userSchema.findOne({email});
+            if(!user){
+                return res.status(400).json({error: 'User not found'})
+            }
+
+            const token = Crypto.randomBytes(20).toString('hex');
+            const now = new Date();
+            now.setHours(now.getHours() + 1 )
+
+            user.passwordResetExpires = now
+            user.passwordResetToken = token
+            await user.save()
+            console.log(token)
+            console.log(now)
+
+            transporterHotmail.sendMail({
+                from:"joaoeudes91135538@hotmail.com",
+                to:email,
+                subject:'Recuperação de senha',
+                html:`<p>Esqueceu a senha?, não tem problema utilize o token enviado para redefinir a senha, o token expira dentro de 1 hora.</p>  <br></br> <p>token: ${token}</p>`,
+                text:`Esqueceu a senha?, não tem problema utilize o token enviado para redefinir a senha. o token expira dentro de 1 hora. ${token}`
+            })
+            .then(() => {console.log("Email enviado com sucesso")})
+            .catch(err => console.log(err))
+
+            req.status(200).json({
+                statusCode:200,
+                message:"Token enviado com sucesso, cheque sua caixa de email"
+            })
+        
+        } catch (error) {
+            res.status(400).json({error: 'Erro on forgot password, try again'})
+        }
+    }
+
+
+    //Função para que o usuário possa redefinir sua senha através do token
+    
 
 
     

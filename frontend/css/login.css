@@ -14,25 +14,25 @@ html{
 
 header{
     text-align: center;
-    color: white;
-    margin-top: 30px;
+    color:#adc5f8;
+    margin-top: 1.9rem;
     
 }
 
-#LinkInscrição{
-    color: rgb(224, 124, 124);
+a{
+    color:#2b6eff;
     font-weight: 500;
+    transition: 1s;
 }
 
-#LinkInscrição:hover{
-    color: rgb(247, 58, 58);
+a:hover{
+    color: #fff;
     text-decoration: underline;
     
 }
 
 main img{
-    
-    width: 600px;
+    width: 38rem;
     height: auto;
     margin: auto;
     
@@ -49,39 +49,43 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-    gap: 20px;
+    margin-top: 6.3rem;
+    gap: 1.3rem;
     
 }
 
 label{
-    color: red;
+    color: #545cf5;
+    margin-left: 1.5rem;
+    font-weight: 700;
 }
 
 #Cadastrar{
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 1.3rem;
+    background-color: #040a81;
     color: white;
-    background-color: rgb(167, 69, 69);
-    padding: 15px;
-    width: 220px;
-    box-shadow: 2px 2px 1px 1px black;
+    padding: 1rem;
+    width: 13.8rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem black;
     border: none;
     border: black solid;
     transition-duration: 1s;
+    margin-top: 0.5rem;
+    
 }
 
 
 
 #Cadastrar:hover{
-    background-color: rgb(211, 130, 130);
     transform: scale(1.0);
+    background-color: #6193fd;
     
 }
 
 input{
-    border:solid rgb(2, 2, 110);
     box-shadow: 1px 1px 1px 1px black;
+    text-indent: 1.5rem;
     
 }
 
@@ -93,28 +97,54 @@ input{
 
 #labor{
     color: white;
-}
-
-
-i{
-    color: white;
-    margin-top: 2px;
-}
-
-i:hover{
-    color:rgb(211, 130, 130) ;
-    cursor: pointer;
+    display: block;
+    
     
 }
 
+
+#eye{
+    position: absolute;
+    top: 1.3rem;
+    right: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #013bb6;
+}
+
+#eye:hover{
+    transform: scale(1.1);
+    
+}
+
+.iconeLeft{
+    position: absolute;
+    top: 1.5rem;
+    left: 0.5rem;
+    color: #013bb6;
+}
+
+#Checkbox{
+    display: flex;
+    margin-right: 8.6rem;
+    
+}
+
+#Check1{
+    cursor: pointer;
+}
+
+
+
 #CapsLockMessage{
-    color: red;
-    display: none;
+color: #6193fd;
+display: none;
 }
 
 #MessageError{
     text-align: center;
     display: none;
+    
 }
 
 
