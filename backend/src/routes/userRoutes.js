@@ -8,12 +8,12 @@ const userController = require("../controllers/UserController")
 const authController = require("../controllers/authController")
 
 //Importação dos middlewares de erro , login e cadastro
-    const {loginValidate} = require("../middlewares/userMiddleware")
-    const {registerValidate} = require("../middlewares/userMiddleware")
+    const {registerValidate, updateForgotPass , updateUser} = require("../middlewares/userMiddleware")
     const ErrorMiddleware = require("../middlewares/errorMiddlewares")
 
 //Importação de middlewares de checagem se email já existe no banco de dados
-    const {checkExistingEmail} = require("../middlewares/repetionMiddleware")
+    const {checkExistingEmail} = require("../middlewares/repetionEmailMiddleware")
+
     
 
 
@@ -28,10 +28,12 @@ router.get("/todos" , userController.getAll)
 router.get("/:id" , userController.getUserById)
 
 //Rota que irá criar um novo usuário no banco de dados (POST)
+
 router.post("/criar" , checkExistingEmail , registerValidate, userController.createUser)
 
 //Rota que irá dá um update em um usuário existente(UPDATE - PUT)
-router.put("/:id" ,registerValidate  ,userController.updateUserById)
+
+router.put("/:id" ,updateUser  ,userController.updateUserById)
 
 //Rota que irá pegar o usuário pelo id e enviar um email como resposta da requisição(GET-ID)
 
@@ -43,7 +45,7 @@ router.delete("/:id" , userController.deleteById)
 
 //Rota de login , que o usuário irá cadastrar seu email e senha e acontecerá a geração de um token ( POST)
 
-router.post("/login" , loginValidate ,authController.login)
+router.post("/login" , authController.login)
 
 //Rota autenticada , que irá dizer se o token existe ou não (POST)
 
@@ -51,6 +53,9 @@ router.post("/rotaAutenticada" , userController.rotaAutenticada , authController
 
 //Rota que enviará o email com o token para recuperação de senha para o usuário
 router.post("/forgotPassword", authController.forgotPassword)
+
+//Rota em que o usuário poderá redefinir a sua senha
+router.post("/resetPassword" ,updateForgotPass , authController.resetPassword)
 
 
 //Rota de teste

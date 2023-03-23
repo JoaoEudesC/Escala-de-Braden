@@ -3,7 +3,7 @@
     const bcrypt = require("bcrypt")
     const jwt = require("jsonwebtoken")
     const Crypto = require("crypto")
-    const {transporterHotmail} = require("../mail/mailler")
+    const {transporterGmail} = require("../mail/mailler")
 
 
 
@@ -95,7 +95,7 @@
         try {
             const user = await userSchema.findOne({email});
             if(!user){
-                return res.status(400).json({error: 'User not found'})
+                return res.status(400).json({error:'User not found'})
             }
 
             const token = Crypto.randomBytes(20).toString('hex');
@@ -108,8 +108,8 @@
             console.log(token)
             console.log(now)
 
-            transporterHotmail.sendMail({
-                from:"joaoeudes91135538@hotmail.com",
+            transporterGmail.sendMail({
+                from:"joaoeudes91135538@gmail.com",
                 to:email,
                 subject:'Recuperação de senha',
                 html:`<p>Esqueceu a senha?, não tem problema utilize o token enviado para redefinir a senha, o token expira dentro de 1 hora.</p>  <br></br> <p>token: ${token}</p>`,
@@ -118,18 +118,48 @@
             .then(() => {console.log("Email enviado com sucesso")})
             .catch(err => console.log(err))
 
-            req.status(200).json({
+            res.status(200).json({
                 statusCode:200,
                 message:"Token enviado com sucesso, cheque sua caixa de email"
             })
         
         } catch (error) {
-            res.status(400).json({error: 'Erro on forgot password, try again'})
+            res.status(400).json('Erro on forgot password, try again' +  error)
         }
     }
 
 
     //Função para que o usuário possa redefinir sua senha através do token
+    authController.resetPassword = async(req , res) =>{
+        const {email, passwordResetToken, password} = req.body;      //Aqui eu estou dizendo que vou pegar estes elementos do corpo da requisição
+        try {
+            const user = await userSchema.findOne({email}) //Estou mandando ele achar o Email do corpo da requisição no banco de dados se ele não acahar vai retornar que o token é invalido
+            .select('+passwordResetToken passwordResetExpires')
+            if(!user){
+                return res.status(400).json({error: "User not found"})
+            }
+
+            if(passwordResetToken !== user.passwordResetToken){
+                return res.status(400).json({error: "Token invalid"})  //Se o token passado no corpo da requisição for diferente do token registrado no banco dados(Invalido)
+            }
+
+            const now = new Date();
+            if(now > user.passwordResetExpires){
+                return res.status(400).json({error: "Token expired, generate a new one"}) //Se a minha hora atual for maior do que a hora em que o token for gerado, ele ta expirado, ou seja , se ele for maior que 1 hora a mais
+            }
+
+            user.password = password    //Se passar por todas as validações a senha vai sofrer um update, sendo a passada na requisição atribuida a que está no banco de dados
+            await user.save()
+
+
+            res.status(200).json({
+                message:"Senha atualizada com sucesso",
+                statusCode:200
+            })
+        } catch (error) {
+            res.status(400).send({error: "Cannot reset password, try again" + error})
+        }
+    }
     
 
 
