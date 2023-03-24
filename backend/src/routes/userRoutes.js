@@ -41,7 +41,7 @@ router.get("/email/:id" , userController.getByIdAndShowEmail)
 
 //Rota que irá deletar os usuários com base no seu id (DELETE)
 
-router.delete("/:id" , userController.deleteById)
+router.delete("/delete/:id" , userController.deleteById)
 
 //Rota de login , que o usuário irá cadastrar seu email e senha e acontecerá a geração de um token ( POST)
 

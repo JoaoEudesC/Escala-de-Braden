@@ -37,16 +37,19 @@
                     if(!ValidationPassword){
                         return  res.status(401).json({
                             statusCode:401,
-                            message:"Usuário não autorizado"
+                            message:"Usuário não encontrado"
                         })
                     }
                     //Criação de token
                     const token = jwt.sign({name:usuário.name} , SECRET)
+                    const _id = usuário._id
                     res.status(200).json({
                         statusCode:200,
                         message:"Login realizado com sucesso!",
                         data:{
-                            token
+                            token,
+                            Id:_id
+                            
                         }
                     })
                 })
