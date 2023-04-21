@@ -41,7 +41,7 @@
                         })
                     }
                     //Criação de token
-                    const token = jwt.sign({name:usuário.name} , SECRET)
+                    const token = jwt.sign({name:usuário.name} , SECRET ,  {expiresIn:"1d"})
                     const _id = usuário._id
                     res.status(200).json({
                         statusCode:200,
